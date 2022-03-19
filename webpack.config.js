@@ -14,6 +14,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: `Development`,
+            template: path.join(PATH_SOURCE, `./index.html`),
         }),
     ],
     output: {
