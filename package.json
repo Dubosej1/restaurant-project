@@ -13,6 +13,8 @@
   "author": "Johnaven Dubose",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
     "css-loader": "^6.7.0",
     "html-webpack-plugin": "^5.5.0",
     "sass-loader": "^12.6.0",
