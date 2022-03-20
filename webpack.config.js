@@ -31,6 +31,21 @@ module.exports = (env) => {
             filename: "js/[name].[contenthash].js",
             publicPath: "/",
         },
+
+        devServer: {
+            static: {
+                directory: PATH_DIST,
+            },
+            host: "localhost",
+            port: 8080,
+            historyApiFallback: true,
+            client: {
+                overlay: {
+                    errors: true,
+                    warnings: true,
+                },
+            },
+        },
     
         module: {
             rules: [
