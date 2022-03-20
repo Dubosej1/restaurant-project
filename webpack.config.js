@@ -78,6 +78,12 @@ module.exports = (env) => {
                                     useBuiltIns: "usage",
                                     corejs: 3,
                                 }],
+                                [
+                                    "@babel/preset-react",
+                                    {
+                                        runtime: "automatic",
+                                    },
+                                ],
                             ],
                         },
                     }
