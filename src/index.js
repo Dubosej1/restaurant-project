@@ -1,10 +1,14 @@
 import './sass/style.scss';
 
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-function Root() {
-  return <h1>Base State</h1>;
+import Nav from './components/nav.js';
+
+class App extends Component {
+  render() {
+    return <Nav />;
+  }
 }
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
