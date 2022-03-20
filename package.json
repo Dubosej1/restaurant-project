@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --env environment=development --config webpack.config.js",
     "build": "webpack --env environment=production --config webpack.config.js",
-    "devserver": "webpack-dev-server --env environment=development --config webpack.config.js"
+    "devserver": "webpack-dev-server --env environment=development --config webpack.config.js",
+    "lint": "eslint ./src"
   },
   "keywords": [
     "restaurant",
@@ -24,6 +25,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.0",
     "eslint": "^8.11.0",
+    "eslint-plugin-react": "^7.29.4",
     "html-webpack-plugin": "^5.5.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
