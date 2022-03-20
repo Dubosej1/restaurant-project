@@ -1,3 +1,8 @@
+@font-face {
+  font-family: ubuntu;
+  src: url('../assets/Ubuntu-Regular.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,4 +15,14 @@ html {
 
 body {
   font-size: 1.6rem;
+}
+
+.nav {
+  background-color: #1b1819;
+}
+
+.btn {
+  &__nav {
+    font-family: ubuntu;
+  }
 }
