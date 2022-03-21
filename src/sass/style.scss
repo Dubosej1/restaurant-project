@@ -3,6 +3,9 @@
   src: url('../assets/Ubuntu-Regular.ttf');
 }
 
+$color-nav-link-default: #ffffff;
+$color-nav-link-active: #b47f3d;
+
 * {
   margin: 0;
   padding: 0;
@@ -19,10 +22,42 @@ body {
 
 .header {
   background-color: #1b1819;
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    display: inline-block;
+    padding: 0 5rem;
+  }
+}
+
+.nav {
+  display: inline-block;
+  margin-left: 25rem;
+  // height: 12rem;
 }
 
 .btn {
   &__nav {
-    font-family: ubuntu;
+    font-family: ubuntu, sans-serif;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    background: none !important;
+    border: none;
+    // padding: 0 !important;
+    color: $color-nav-link-default;
+    // text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-nav-link-active;
+    }
+
+    &--active {
+      color: $color-nav-link-active;
+    }
   }
 }
