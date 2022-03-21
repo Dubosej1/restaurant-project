@@ -1,23 +1,23 @@
 import React from 'react';
 
-class Nav extends React.Component {
+class Header extends React.Component {
   render() {
     return (
-      <div className="nav">
+      <header className="header">
         <img
           src="https://via.placeholder.com/50"
-          className="nav__logo"
-          alt="logo"
+          className="header__logo"
+          alt="Site Logo"
         />
-        <div className="nav__btn-container">
+        <nav className="nav">
           <button className="btn btn__nav btn__home">Home</button>
           <button className="btn btn__nav btn__menu">Menu</button>
           <button className="btn btn__nav btn__location">Location</button>
           <button className="btn btn__nav btn__contact">Contact</button>
-        </div>
-      </div>
+        </nav>
+      </header>
     );
   }
 }
 
-export default Nav;
+export default Header;
