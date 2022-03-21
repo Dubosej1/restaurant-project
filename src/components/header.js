@@ -1,12 +1,5 @@
 import React from 'react';
-
-// class NavButton extends React.Component {
-//   render() {
-//     return (
-
-//     );
-//   }
-// }
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
   constructor(props) {
@@ -34,11 +27,12 @@ class Header extends React.Component {
 
 Header.propTypes = {
   isMobile: PropTypes.bool,
+  setPage: PropTypes.func,
 };
 
 class MobileNavButton extends React.Component {
   render() {
-    <></>;
+    return <></>;
   }
 }
 
@@ -54,35 +48,35 @@ class Nav extends React.Component {
         <button
           className={`btn btn__${navClassName} btn__home`}
           onClick={this.props.setPage}
-          page="home"
+          data-page="home"
         >
           Home
         </button>
         <button
           className={`btn btn__${navClassName} btn__about`}
           onClick={this.props.setPage}
-          page="about"
+          data-page="about"
         >
           About
         </button>
         <button
           className={`btn btn__${navClassName} btn__menu`}
           onClick={this.props.setPage}
-          page="menu"
+          data-page="menu"
         >
           Menu
         </button>
         <button
           className={`btn btn__${navClassName} btn__location`}
           onClick={this.props.setPage}
-          page="location"
+          data-page="location"
         >
           Location
         </button>
         <button
           className={`btn btn__${navClassName} btn__contact`}
           onClick={this.props.setPage}
-          page="contact"
+          data-page="contact"
         >
           Contact
         </button>
@@ -90,6 +84,11 @@ class Nav extends React.Component {
     );
   }
 }
+
+Nav.propTypes = {
+  mobile: PropTypes.bool,
+  setPage: PropTypes.func,
+};
 
 // class Header extends React.Component {
 //   render() {
