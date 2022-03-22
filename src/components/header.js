@@ -15,7 +15,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <img
-          src="https://via.placeholder.com/50"
+          src="https://via.placeholder.com/120"
           className="header__logo"
           alt="Site Logo"
         />
@@ -36,9 +36,21 @@ class MobileNavButton extends React.Component {
   }
 }
 
+// class NavLink extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       isActive: false,
+//     };
+
+//     setActive;
+//   }
+// }
+
 class Nav extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   render() {

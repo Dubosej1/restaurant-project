@@ -7,6 +7,7 @@ import Header from './components/header.js';
 
 import Home from './components/home.js';
 import About from './components/about.js';
+import { Nav, MobileNav } from './components/nav.js';
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +42,8 @@ class App extends Component {
 
     return (
       <div>
+        <Nav isMobile={this.state.isMobile} />
+        <MobileNav setPage={this.setPage} />
         <Header
           currentPage={this.state.currentPage}
           isMobile={this.state.isMobile}
