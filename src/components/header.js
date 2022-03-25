@@ -1,27 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { DesktopNav } from './nav.js';
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  // render() {
+  //   const nav = this.props.isMobile ? (
+  //     <MobileNavButton />
+  //   ) : (
+  //     <Nav mobile={false} setPage={this.props.setPage} />
+  //   );
+  //   return (
+  //     <header className="header">
+  //       <img
+  //         src="https://via.placeholder.com/120"
+  //         className="header__logo"
+  //         alt="Site Logo"
+  //       />
+  //       <React.Fragment>{nav}</React.Fragment>
+  //     </header>
+  //   );
+  // }
+
   render() {
-    const nav = this.props.isMobile ? (
-      <MobileNavButton />
-    ) : (
-      <Nav mobile={false} setPage={this.props.setPage} />
-    );
-    return (
-      <header className="header">
-        <img
-          src="https://via.placeholder.com/120"
-          className="header__logo"
-          alt="Site Logo"
-        />
-        <React.Fragment>{nav}</React.Fragment>
-      </header>
-    );
+    return <DesktopNav setPage={this.props.setPage} />;
   }
 }
 
