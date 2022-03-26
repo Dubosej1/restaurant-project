@@ -1,28 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Nav } from './nav.js';
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+function Header(props) {
+  const nav = props.isMobile ? <MobileNavButton /> : <Nav />;
 
-  render() {
-    const nav = this.props.isMobile ? (
-      <MobileNavButton />
-    ) : (
-      <Nav mobile={false} setPage={this.props.setPage} />
-    );
-    return (
-      <header className="header">
-        <img
-          src="https://via.placeholder.com/50"
-          className="header__logo"
-          alt="Site Logo"
-        />
-        <React.Fragment>{nav}</React.Fragment>
-      </header>
-    );
-  }
+  return (
+    <header className="header">
+      <img
+        src="https://via.placeholder.com/120"
+        className="header__logo"
+        alt="Site Logo"
+      />
+      <React.Fragment>{nav}</React.Fragment>
+    </header>
+  );
 }
 
 Header.propTypes = {
@@ -35,79 +27,5 @@ class MobileNavButton extends React.Component {
     return <></>;
   }
 }
-
-class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const navClassName = this.props.mobile ? `mobileNav` : `nav`;
-    return (
-      <nav className="nav">
-        <button
-          className={`btn btn__${navClassName} btn__home`}
-          onClick={this.props.setPage}
-          data-page="home"
-        >
-          Home
-        </button>
-        <button
-          className={`btn btn__${navClassName} btn__about`}
-          onClick={this.props.setPage}
-          data-page="about"
-        >
-          About
-        </button>
-        <button
-          className={`btn btn__${navClassName} btn__menu`}
-          onClick={this.props.setPage}
-          data-page="menu"
-        >
-          Menu
-        </button>
-        <button
-          className={`btn btn__${navClassName} btn__location`}
-          onClick={this.props.setPage}
-          data-page="location"
-        >
-          Location
-        </button>
-        <button
-          className={`btn btn__${navClassName} btn__contact`}
-          onClick={this.props.setPage}
-          data-page="contact"
-        >
-          Contact
-        </button>
-      </nav>
-    );
-  }
-}
-
-Nav.propTypes = {
-  mobile: PropTypes.bool,
-  setPage: PropTypes.func,
-};
-
-// class Header extends React.Component {
-//   render() {
-//     return (
-//       <header className="header">
-//         <img
-//           src="https://via.placeholder.com/50"
-//           className="header__logo"
-//           alt="Site Logo"
-//         />
-// <nav className="nav">
-//   <button className="btn btn__nav btn__home">Home</button>
-//   <button className="btn btn__nav btn__menu">Menu</button>
-//   <button className="btn btn__nav btn__location">Location</button>
-//   <button className="btn btn__nav btn__contact">Contact</button>
-// </nav>
-//       </header>
-//     );
-//   }
-// }
 
 export default Header;

@@ -1,55 +1,42 @@
 import './sass/style.scss';
-
-import React, { Component } from 'react';
+import React, { useState, createContext, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './components/header.js';
-
 import Home from './components/home.js';
 import About from './components/about.js';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPage: `home`,
-      isMobile: false,
-    };
-    this.setPage = this.setPage.bind(this);
-  }
+export const PageContext = createContext({
+  currentPage: ``,
+  setCurrentPage: () => {},
+});
 
-  setPage = (event) => {
-    console.log(event.target);
-    this.setState({
-      currentPage: event.target.dataset.page,
-    });
-  };
+function App(props) {
+  const [isMobile, setIsMobile] = useState(false);
+  const [currentPage, setCurrentPage] = useState(`home`);
 
-  assignCurrentPage(currPage) {
+  const page = useMemo(() => ({ currentPage, setCurrentPage }), [currentPage]);
+
+  function assignCurrentPage(currentPage) {
     let pageElement;
-    if (currPage === `home`) pageElement = <Home />;
-    if (currPage === `about`) pageElement = <About />;
-    // if (currPage === `menu`) pageElement = <Menu />;
-    // if (currPage === `location`) pageElement = <Location />;
-    // if (currPage === `contact`) pageElement = <Contact />;
+    if (currentPage === `home`) pageElement = <Home />;
+    if (currentPage === `about`) pageElement = <About />;
+    // if (currentPage === `menu`) pageElement = <Menu />;
+    // if (currentPage === `location`) pageElement = <Location />;
+    // if (currentPage === `contact`) pageElement = <Contact />;
     return pageElement;
   }
 
-  render() {
-    let currPage = this.state.currentPage;
-    let pageElement = this.assignCurrentPage(currPage);
+  let pageElement = assignCurrentPage(currentPage);
 
-    return (
+  return (
+    <PageContext.Provider value={page}>
       <div>
-        <Header
-          currentPage={this.state.currentPage}
-          isMobile={this.state.isMobile}
-          setPage={this.setPage}
-        />
+        <Header currentPage={currentPage} isMobile={isMobile} />
         {pageElement}
       </div>
-    );
-  }
+    </PageContext.Provider>
+  );
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
