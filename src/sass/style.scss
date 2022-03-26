@@ -52,6 +52,10 @@ body {
     // text-decoration: underline;
     cursor: pointer;
 
+    &.active {
+      color: $color-nav-link-active;
+    }
+
     &:hover {
       color: $color-nav-link-active;
     }
