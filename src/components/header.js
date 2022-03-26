@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Nav } from './nav.js';
+import { DesktopNav } from './nav.js';
 
 function Header(props) {
-  const nav = props.isMobile ? <MobileNavButton /> : <Nav />;
+  const nav = props.isMobile ? <MobileNavButton /> : <DesktopNav />;
 
   return (
     <header className="header">
