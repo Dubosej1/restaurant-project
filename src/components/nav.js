@@ -49,3 +49,11 @@ export function DesktopNav() {
 export function MobileNav() {
   return <Nav navtype="mobile" />;
 }
+
+export function MobileNavContainer() {
+  return (
+    <div className="mobile-nav__container">
+      <MobileNav />
+    </div>
+  );
+}
