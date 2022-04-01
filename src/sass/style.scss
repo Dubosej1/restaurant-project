@@ -3,6 +3,21 @@
   src: url('../assets/Ubuntu-Regular.ttf');
 }
 
+@font-face {
+  font-family: voltaire;
+  src: url('../assets/Voltaire-Regular.ttf');
+}
+
+@font-face {
+  font-family: open-sans;
+  src: url('../assets/OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+@font-face {
+  font-family: amatic-sc;
+  src: url('../assets/AmaticSC-Regular.ttf');
+}
+
 $color-nav-link-default: #ffffff;
 $color-nav-link-active: #b47f3d;
 
