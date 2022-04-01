@@ -122,6 +122,8 @@ body {
     &__item-container {
       margin: 6rem 13rem;
       padding: 0rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
@@ -215,4 +217,8 @@ body {
       font-size: 1.4rem;
     }
   }
+}
+
+.highlight-item {
+  max-width: 50%;
 }
