@@ -52,7 +52,7 @@ function HighlightItem(props) {
   ));
 
   return (
-    <div>
+    <div className="highlight-item">
       <div className="menu__icon-heading-box">
         <div className="menu__icon-container">
           <img
