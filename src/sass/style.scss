@@ -22,6 +22,7 @@
 $color-nav-link-active: #b47f3d;
 $color-background-color-main: #1b1819;
 $color-text-default: #ffffff;
+$color-background-color-alt: #271a03;
 
 @mixin define-grid-position($column-start, $column-end, $row-start, $row-end) {
   grid-column-start: $column-start;
@@ -126,6 +127,26 @@ body {
       justify-content: space-between;
     }
   }
+
+  &-combo-of-day {
+    background-color: $color-background-color-alt;
+    padding: 8rem 0 5rem;
+
+    &__section-heading {
+      font-family: voltaire, sans-serif;
+      font-size: 6.2rem;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: 500;
+      line-height: 7rem;
+      color: $color-text-default;
+
+      &-container {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
 }
 
 .menu {
@@ -221,4 +242,12 @@ body {
 
 .highlight-item {
   max-width: 50%;
+}
+
+.heading-decoration {
+  border-top-width: 1px;
+  border-top-color: $color-text-default;
+  border-top-style: dashed;
+  flex-grow: 1;
+  margin: 0 3rem;
 }
