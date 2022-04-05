@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionHeading } from './headings.js';
+import { SectionHeading, SectionHeadingWithDeco } from './headings.js';
 import { highlights } from './menu.js';
 import PropTypes from 'prop-types';
 
@@ -8,6 +8,7 @@ export function Home() {
     <div>
       <HeaderImage />
       <MenuHighlightSection />
+      <ComboOfDaySection />
     </div>
   );
 }
@@ -23,13 +24,6 @@ function HeaderImage() {
     </div>
   );
 }
-
-// const friesHighlight = {
-//   heading: `Fries`,
-//   subHead: `Made from 100% natural oil. No Trans or gluten.`,
-//   icon: null,
-//   menuItems: getMenuItems([`Curly Fries`]),
-// };
 
 function MenuHighlightSection() {
   let highlightElems = highlights.map((item, index) => (
@@ -77,8 +71,6 @@ function HighlightItem(props) {
 
 HighlightItem.propTypes = {
   item: PropTypes.object,
-  // item.heading: PropTypes.string,
-  // item.subHead: PropTypes.string
 };
 
 function MenuItem(props) {
@@ -103,15 +95,17 @@ function MenuItem(props) {
 
 MenuItem.propTypes = {
   item: PropTypes.object,
-  // item.price: PropTypes.array,
-  // item.num: PropTypes.number,
-  // item.name: PropTypes.string,
-  // item.text: PropTypes.string,
 };
 
-export default Home;
-
-{
-  /* <HighlightItem item={highlights[0]} />
-<HighlightItem item={highlights[1]} /> */
+function ComboOfDaySection() {
+  return (
+    <div className="home-combo-of-day">
+      <SectionHeadingWithDeco
+        comp="home-combo-of-day"
+        text="Combo Of The Day"
+      />
+    </div>
+  );
 }
+
+export default Home;
