@@ -89,47 +89,47 @@ _Burgers 100% natural, without preservatives, hormones or antibiotics._
    _meat, cheese, onion rings, fried bacon and wasabi moinese_
 4. Cheddar: `5.98/6.77`  
    _meat, cheddar, caramelized onion on black bread_
-5. Italian:
+5. Italian: `5.40/5.6`
    _meat, cheese and homemade tomato sauce_
-6. Veggie:
+6. Veggie: `6.10/6.50`
    _hamburger made with chickpeas and shitake, cheese, arugula and tomato_
-7. Salmon:
+7. Salmon: `6.80/7.60`
    _homemade hamburger mozzarella cheese, arugula, onion and wasabi moinese_
-8. Bacon:
+8. Bacon: `6.50/7.00`
    _meat, house bacon jam with cheese_
-9. Beard Jack:
+9. Beard Jack: `6.50/7.10`
    _meat, cheese, barbecue sauce with Jack Daniel's Whiskey, Onion Crispy and Wasabi Mayonaise Accompaniment_
-10. Crispie Chicken:
+10. Crispie Chicken: `5.98`
     _breaded chicken fillet with coleslaw and wasabi mayonaise_
-11. Cheese Bacon:
+11. Cheese Bacon: `6.30/7.00`
     _beef, cheddar, mozzarella, bacon and house sauce_
-12. Green Burger:
+12. Green Burger: `6.40`
     _Veggie Burger of Pea and Beetroot, Lettuce, Tomato and Onion_
 
 _All burgers can be substituted for Veggie at no additional cost. Or Salmon for an additional `1.20`._
 
 ## Dogs
 
-13. Traditional Dog:
+13. Traditional Dog: `4.20`
     _sausage, mayonaise, ketchup, mustard, potato sticks_
-14. Dog Bacon:
+14. Dog Bacon: `4.40`
     _sausage, bacon, melted cheddar_
 
 ## Kids
 
-17. Kids:
+17. Kids: `6.50`
     _meat, cheese, 1/2 size wavy fries and small soda_
-18. 3 Chickens:
+18. 3 Chickens: `6.50`
     _white rice and wavy fries_
 
 ## Drinks
 
-50. Water:
-51. Soda:
-52. Natural Orange Juice
-53. Pink Lemonade
-54. Mint Iced Tea:
-55. Espresso Coffee:
+50. Water: `1`
+51. Soda: `1.40`
+52. Natural Orange Juice: `2.20`
+53. Pink Lemonade: `2.79`
+54. Mint Iced Tea: `2.79`
+55. Espresso Coffee: `1.20`
 
 ---
 
@@ -138,48 +138,48 @@ _All burgers can be substituted for Veggie at no additional cost. Or Salmon for 
 _Made from 100% natural oil. No Trans or gluten._
 _Half Size/Full Size_
 
-28. Curly Fries:
+28. Curly Fries: `3.10/4.60`
     _homemade with paprika_
-29. Parmesean Truffle Fries:
+29. Parmesean Truffle Fries: `4.40/5.70`
     _truffle with parmesean_
-30. Wavy Fries:
+30. Wavy Fries: `2.70/3.60`
     _w/ paprika seasoning and spices_
-31. Rustic Fries:
+31. Rustic Fries: `3.10/4.10`
     _w/rosemary and garlic or w/cheddar_
-32. Onion Rings
-33. Breaded Chicken:
+32. Onion Rings: `4.20`
+33. Breaded Chicken: `5.10`
     _with barbejack sauce_
 
 ## Extras
 
-37. Extra Cheese, Bacon Jelly, Egg or house mayo:
-38. Extra Burger (100gr / 160gr):
-39. 250g jar of house mayo or wasabi:
-    45.? 250g jar of barbejack:
+37. Extra Cheese, Bacon Jelly, Egg or house mayo: `0.99`
+38. Extra Burger (100gr / 160gr): `2.40/2.70`
+39. 250g jar of house mayo or wasabi: `3.60`
+    45.? 250g jar of barbejack: `5.40`
 
 ## Shakes
 
-_Mini/Normal_ 41. Nutella: 42. Chocolate and Caramel: 43. Hazelnut cream with Kinder Bueno:
+_Mini/Normal_ 41. Nutella: `3.70/5.30` 42. Chocolate and Caramel: `3.5/4.50` 43. Hazelnut cream with Kinder Bueno: `4.10/5.50`
 
 ## Sweets
 
-44. Petti Gateau?:
-45. Churritos:
+44. Petti Gateau?: `4.10`
+45. Churritos: `3.50`
     _with caramel (6 units)_
-46. Small Brownie:
-47. Brownie w/ Ice Cream:
-48. Belgian Brigadier:
+46. Small Brownie: `2.10`
+47. Brownie w/ Ice Cream: `4.90`
+48. Belgian Brigadier: `2.90`
     _in the 80g pan_
-49. Carrot Cake:
+49. Carrot Cake: `4.70`
     _Homemade, Belgian brigadeiro syrup and cream ice cream_
-50. Small/Large Cookie:
+50. Small/Large Cookie: `2.30/3.30`
 
 ## Beer
 
-70. Stella/Heineken/Original:
-71. Madeleine Lager:
-72. Madeleine IPA:
-73. Wine can 269ml (Lovin Wine):
+70. Stella/Heineken/Original: `2.20`
+71. Madeleine Lager: `3.70`
+72. Madeleine IPA: `4.30`
+73. Wine can 269ml (Lovin Wine): `3.99`
     _Red, White or rose_
 
 # Location
