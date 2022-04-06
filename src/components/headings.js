@@ -19,6 +19,10 @@ function HeadingDecoration() {
   return <span className="heading-decoration"> </span>;
 }
 
+export function SectionSubheading(props) {
+  return <h2 className={`${props.comp}__section-subheading`}>{props.text}</h2>;
+}
+
 SectionHeading.propTypes = {
   comp: PropTypes.string,
   text: PropTypes.string,
