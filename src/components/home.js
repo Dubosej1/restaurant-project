@@ -1,6 +1,10 @@
 import React from 'react';
-import { SectionHeading, SectionHeadingWithDeco } from './headings.js';
-import { highlights } from './menu.js';
+import {
+  SectionHeading,
+  SectionHeadingWithDeco,
+  SectionSubheading,
+} from './headings.js';
+import { highlights, combos, WeightSpan, ComboExtraInfo } from './menu.js';
 import PropTypes from 'prop-types';
 
 export function Home() {
@@ -98,14 +102,96 @@ MenuItem.propTypes = {
 };
 
 function ComboOfDaySection() {
+  const subtext = `* All burgers can be replaced with veggie at no additional cost`;
   return (
     <div className="home-combo-of-day">
       <SectionHeadingWithDeco
         comp="home-combo-of-day"
         text="Combo Of The Day"
       />
+      <SectionSubheading comp="home-combo-of-day" text={subtext} />
+      <div className="home-combo-of-day__combo-container">
+        <ComboSection
+          combos={combos}
+          range={[1, 7]}
+          addWeight={true}
+          addExtraInfo={false}
+        />
+        <ComboSection
+          combos={combos}
+          range={[8, 12]}
+          addWeight={false}
+          addExtraInfo={true}
+        />
+      </div>
     </div>
   );
 }
+
+function ComboSection(props) {
+  const comboElements = props.combos.map(function (item, index) {
+    if (index + 1 >= props.range[0] && index + 1 <= props.range[1])
+      return <ComboItem key={index} item={item} />;
+  });
+
+  const weightElem = props.addWeight ? <WeightSpan comp="combo-item" /> : null;
+
+  const extraInfoElem = props.addExtraInfo ? <ComboExtraInfo /> : null;
+
+  console.log(comboElements);
+
+  return (
+    <div className="home-combo-of-day__combo-section">
+      {weightElem}
+      {comboElements}
+      {extraInfoElem}
+    </div>
+  );
+}
+
+ComboSection.propTypes = {
+  combos: PropTypes.array,
+  range: PropTypes.array,
+  addWeight: PropTypes.boolean,
+  addExtraInfo: PropTypes.boolean,
+};
+
+function ComboItem(props) {
+  const price =
+    props.item.price.length === 1
+      ? props.item.price[0]
+      : `${props.item.price[0]} / ${props.item.price[1]}`;
+
+  const comboDescElems = props.item.desc.map((item, index) => (
+    <ComboDescElem key={index} text={item} />
+  ));
+
+  return (
+    <div className="combo-item">
+      <div className="combo-item__info-container">
+        <span className="combo-item__name">{props.item.name}</span>
+        <span className="combo-item__price">{price}</span>
+      </div>
+      <div className="combo-item__desc-container">{comboDescElems}</div>
+    </div>
+  );
+}
+
+ComboItem.propTypes = {
+  item: PropTypes.object,
+};
+
+function ComboDescElem(props) {
+  return (
+    <div>
+      <span className="combo-item__desc">{props.text}</span>
+      <br></br>
+    </div>
+  );
+}
+
+ComboDescElem.propTypes = {
+  text: PropTypes.string,
+};
 
 export default Home;
