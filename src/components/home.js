@@ -5,6 +5,7 @@ import {
   SectionSubheading,
 } from './headings.js';
 import { highlights, combos, WeightSpan, ComboExtraInfo } from './menu.js';
+import Footer from './footer.js';
 import PropTypes from 'prop-types';
 
 export function Home() {
@@ -13,6 +14,7 @@ export function Home() {
       <HeaderImage />
       <MenuHighlightSection />
       <ComboOfDaySection />
+      <Footer />
     </div>
   );
 }
