@@ -25,11 +25,21 @@ $color-text-default: #ffffff;
 $color-background-color-alt: #271a03;
 $color-text-combo-name: #e6ac00;
 
+$icon-facebook-white: url('../assets/facebook-icon-white.png');
+$icon-facebook-gold: url('../assets/facebook-icon-gold.png');
+$icon-instagram-white: url('../assets/instagram-icon-white.png');
+$icon-instagram-gold: url('../assets/instagram-icon-gold.png');
+
 @mixin define-grid-position($column-start, $column-end, $row-start, $row-end) {
   grid-column-start: $column-start;
   grid-column-end: $column-end;
   grid-row-start: $row-start;
   grid-row-end: $row-end;
+}
+
+@mixin set-background-img($bg-img) {
+  background: $bg-img;
+  background-size: contain;
 }
 
 * {
@@ -347,7 +357,7 @@ body {
 .footer {
   padding: 4rem 0;
   min-height: 15.6rem;
-  // background-color: $color-background-color-main;
+  background-color: $color-background-color-main;
   &__social-media-link {
     &-container {
       display: flex;
@@ -359,20 +369,43 @@ body {
 
 .social-media-link {
   padding: 0 4rem;
+  color: #b99400;
 }
 
 .social-media-icon {
   display: inline-block;
-  color: purple;
   width: 4.6rem;
   height: 4.6rem;
   transform: rotate(-25deg);
-  color: $color-text-default;
+
+  &__facebook {
+    @include set-background-img($icon-facebook-white);
+
+    &:hover {
+      @include set-background-img($icon-facebook-gold);
+    }
+  }
+
+  &__instagram {
+    @include set-background-img($icon-instagram-white);
+
+    &:hover {
+      @include set-background-img($icon-instagram-gold);
+    }
+  }
 
   &:hover {
     transform: rotate(-25deg) scale(1.2);
   }
 }
+
+// .social-media-icon__facebook {
+//   background: url('../assets/facebook-icon-white.png');
+//   background-size: contain;
+//   height: 4.6rem;
+//   width: 4.6rem;
+// }
+
 // img {
 //   width: 4.2rem;
 //   height: 2.1rem;
