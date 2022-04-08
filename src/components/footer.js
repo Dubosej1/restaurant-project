@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FacebookLogo from '../assets/facebook-logo.png';
-import InstagramLogo from '../assets/instagram.png';
+// import FacebookLogo from '../assets/facebook-logo.png';
+// import InstagramLogo from '../assets/instagram.png';
 
 export default function Footer(props) {
   return (
@@ -15,16 +15,8 @@ export default function Footer(props) {
 function SocialMediaContainer() {
   return (
     <div className="footer__social-media-link-container">
-      <SocialMediaLink
-        link="www.facebook.com"
-        pic={FacebookLogo}
-        name="facebook"
-      />
-      <SocialMediaLink
-        link="www.instagram.com"
-        pic={InstagramLogo}
-        name="instagram"
-      />
+      <SocialMediaLink link="www.facebook.com" name="facebook" />
+      <SocialMediaLink link="www.instagram.com" name="instagram" />
     </div>
   );
 }
@@ -33,11 +25,9 @@ function SocialMediaLink(props) {
   return (
     <div className="footer__social-media-link">
       <a className="social-media-link" href={props.link}>
-        <img
-          className="social-media-icon"
-          src={props.pic}
-          alt={`${props.name} icon`}
-        />
+        <div
+          className={`social-media-icon social-media-icon__${props.name}`}
+        ></div>
       </a>
     </div>
   );
