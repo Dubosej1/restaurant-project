@@ -424,6 +424,15 @@ body {
       font-weight: 400;
       margin-bottom: 1rem;
     }
+
+    &--location {
+      font-family: voltaire;
+      font-size: 6.2rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      line-height: 7rem;
+      color: $color-text-default;
+    }
   }
 
   &__phone-number {
@@ -469,6 +478,22 @@ body {
 
     &-container {
       margin: 2rem 0 1rem;
+    }
+  }
+}
+
+.location {
+  &-main {
+    background-color: $color-background-color-alt;
+    background-image: url(../assets/background-transparent.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    background-attachment: fixed;
+
+    &__section-heading-container {
+      display: flex;
+      align-items: center;
     }
   }
 }
