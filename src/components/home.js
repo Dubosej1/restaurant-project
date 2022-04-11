@@ -105,11 +105,14 @@ MenuItem.propTypes = {
 
 function ComboOfDaySection() {
   const subtext = `* All burgers can be replaced with veggie at no additional cost`;
+  const sectionHeadingElem = (
+    <SectionHeading comp="home-combo-of-day" text="Combo of the Day" />
+  );
   return (
     <div className="home-combo-of-day">
       <SectionHeadingWithDeco
         comp="home-combo-of-day"
-        text="Combo Of The Day"
+        text={sectionHeadingElem}
       />
       <SectionSubheading comp="home-combo-of-day" text={subtext} />
       <div className="home-combo-of-day__combo-container">

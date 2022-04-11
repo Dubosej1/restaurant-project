@@ -9,7 +9,8 @@ export function SectionHeadingWithDeco(props) {
   return (
     <div className={`${props.comp}__section-heading-container`}>
       <HeadingDecoration />
-      <SectionHeading comp={props.comp} text={props.text} />
+      {/* <SectionHeading comp={props.comp} text={props.text} /> */}
+      {props.text}
       <HeadingDecoration />
     </div>
   );
