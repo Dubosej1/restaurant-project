@@ -6,6 +6,7 @@ import Header from './components/header.js';
 import Home from './components/home.js';
 import About from './components/about.js';
 import Location from './components/location.js';
+import FullMenu from './components/fullmenu.js';
 
 export const PageContext = createContext({
   currentPage: ``,
@@ -22,7 +23,7 @@ function App(props) {
     let pageElement;
     if (currentPage === `home`) pageElement = <Home />;
     if (currentPage === `about`) pageElement = <About />;
-    // if (currentPage === `menu`) pageElement = <Menu />;
+    if (currentPage === `menu`) pageElement = <FullMenu />;
     if (currentPage === `location`) pageElement = <Location />;
     // if (currentPage === `contact`) pageElement = <Contact />;
     return pageElement;
