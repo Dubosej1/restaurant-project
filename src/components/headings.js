@@ -5,6 +5,10 @@ export function SectionHeading(props) {
   return <h1 className={`${props.comp}__section-heading`}>{props.text}</h1>;
 }
 
+export function SectionDivider() {
+  return <span className="section-divider"> </span>;
+}
+
 export function SectionHeadingWithDeco(props) {
   return (
     <div className={`${props.comp}__section-heading-container`}>
