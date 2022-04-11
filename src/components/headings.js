@@ -33,6 +33,11 @@ SectionHeading.propTypes = {
   text: PropTypes.string,
 };
 
+SectionSubheading.propTypes = {
+  comp: PropTypes.string,
+  text: PropTypes.string,
+};
+
 SectionHeadingWithDeco.propTypes = {
   comp: PropTypes.string,
   text: PropTypes.string,
