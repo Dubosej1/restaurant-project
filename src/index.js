@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import Header from './components/header.js';
 import Home from './components/home.js';
 import About from './components/about.js';
+import Location from './components/location.js';
 
 export const PageContext = createContext({
   currentPage: ``,
@@ -22,7 +23,7 @@ function App(props) {
     if (currentPage === `home`) pageElement = <Home />;
     if (currentPage === `about`) pageElement = <About />;
     // if (currentPage === `menu`) pageElement = <Menu />;
-    // if (currentPage === `location`) pageElement = <Location />;
+    if (currentPage === `location`) pageElement = <Location />;
     // if (currentPage === `contact`) pageElement = <Contact />;
     return pageElement;
   }
