@@ -45,7 +45,7 @@ StoreName.propTypes = {
   div: PropTypes.string,
 };
 
-function PhoneNumber(props) {
+export function PhoneNumber(props) {
   return (
     <div className={`location-info__phone-number--${props.div}`}>
       <span>(203) 555-7536</span>
@@ -57,7 +57,7 @@ PhoneNumber.propTypes = {
   div: PropTypes.string,
 };
 
-function Address(props) {
+export function Address(props) {
   return (
     <div className={`location-info__address--${props.div}`}>
       <span>1455 Whalley Ave</span>
@@ -70,7 +70,7 @@ Address.propTypes = {
   div: PropTypes.string,
 };
 
-function MapLink() {
+export function MapLink() {
   const mapURL = `https://www.google.com/maps/search/?api=1&query=1455+Whalley+Ave.+New+Haven%2C+CT+06511`;
 
   return (
