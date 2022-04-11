@@ -296,6 +296,14 @@ body {
   margin: 0 3rem;
 }
 
+.section-divider {
+  display: block;
+  border-top-width: 3px;
+  border-top-style: dashed;
+  border-top-color: $color-text-default;
+  margin: 8rem 0 0;
+}
+
 .combo-item {
   color: white;
   display: flex;
@@ -443,6 +451,14 @@ body {
       font-weight: 300;
       margin-bottom: 1rem;
     }
+
+    &--location {
+      font-family: ubuntu;
+      font-size: 4.2rem;
+      font-weight: 700;
+      line-height: 2.6rem;
+      margin-top: 6rem;
+    }
   }
 
   &__address {
@@ -452,6 +468,17 @@ body {
       line-height: 2.4rem;
       font-weight: 300;
       margin-bottom: 1rem;
+
+      & > span {
+        display: block;
+      }
+    }
+
+    &--location {
+      font-family: ubuntu;
+      font-size: 2.6rem;
+      font-weight: 300;
+      line-height: 2.6rem;
 
       & > span {
         display: block;
@@ -490,10 +517,26 @@ body {
     background-size: cover;
     background-position: 0 0;
     background-attachment: fixed;
+    color: $color-text-default;
+    padding: 5rem 0 3rem;
 
     &__section-heading-container {
       display: flex;
       align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    &__location-info {
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-subsection {
+        margin-right: 3rem;
+        text-align: right;
+      }
     }
   }
 }
