@@ -26,6 +26,7 @@ $color-background-color-alt: #271a03;
 $color-background-color-black: #000000;
 $color-text-combo-name: #e6ac00;
 $color-text-map-link: #f49339;
+$color-text-category-heading: #bd7102;
 
 $icon-facebook-white: url('../assets/facebook-icon-white.png');
 $icon-facebook-gold: url('../assets/facebook-icon-gold.png');
@@ -238,11 +239,27 @@ body {
     display: grid;
     grid-template-columns: 7rem auto;
     grid-template-rows: auto auto;
+    color: $color-text-default;
+
+    &--full-menu {
+      display: grid;
+      grid-template-columns: 7rem auto;
+      grid-template-rows: auto auto;
+      color: $color-text-default;
+      margin-bottom: 2rem;
+    }
 
     &__num {
       font-family: voltaire;
       font-size: 2rem;
       font-weight: 600;
+
+      &--full-menu {
+        font-family: voltaire;
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+      }
 
       &-container {
         @include define-grid-position(1, 2, 1, -1);
@@ -262,6 +279,13 @@ body {
       font-size: 2rem;
       line-height: 2rem;
       font-weight: 400;
+
+      &--full-menu {
+        font-family: voltaire;
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+      }
     }
 
     &__price {
@@ -269,6 +293,13 @@ body {
       font-size: 1.8rem;
       font-weight: 400;
       line-height: 2rem;
+
+      &--full-menu {
+        font-family: voltaire;
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+      }
     }
 
     &__text {
@@ -280,6 +311,17 @@ body {
       font-weight: 300;
       line-height: 2.4rem;
       font-size: 1.4rem;
+
+      &--full-menu {
+        @include define-grid-position(2, -1, 2, -1);
+        border-top-width: 1px;
+        border-top-color: $color-text-default;
+        border-top-style: dotted;
+        font-family: open-sans;
+        font-size: 1.5rem;
+        font-weight: 100;
+        line-height: 2.4rem;
+      }
     }
   }
 }
@@ -564,6 +606,81 @@ body {
       letter-spacing: 2px;
       font-weight: 400;
       line-height: 3.6rem;
+    }
+  }
+}
+
+.full-menu {
+  &__menu {
+    padding: 0 13rem;
+    margin-top: 10rem;
+  }
+  &__category {
+    color: $color-text-default;
+  }
+
+  &__subsection {
+    width: 50%;
+  }
+}
+
+.category {
+  &__icon {
+    &-heading-box {
+      display: flex;
+      align-items: center;
+    }
+    &-container {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+
+  &__heading {
+    &--highlight {
+      font-size: 2.8rem;
+      font-family: open-sans;
+      display: inline-block;
+      text-transform: uppercase;
+      vertical-align: baseline;
+      letter-spacing: 2px;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    &--full-menu {
+      color: $color-text-category-heading;
+      font-size: 3.5rem;
+      font-family: voltaire;
+      display: inline-block;
+      text-transform: uppercase;
+      vertical-align: baseline;
+      letter-spacing: 2px;
+      line-height: 2.4rem;
+      font-weight: 300;
+    }
+
+    &-container {
+      display: inline-block;
+      min-height: 4rem;
+    }
+  }
+
+  &__sub-head {
+    font-family: open-sans;
+    font-size: 1.68rem;
+    font-weight: 100;
+    line-height: 2.4rem;
+
+    &--full-menu {
+      font-family: open-sans;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2.4rem;
+    }
+
+    &-container {
+      margin: 0.3rem 0 2rem;
     }
   }
 }
