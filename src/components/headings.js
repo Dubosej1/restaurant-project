@@ -40,5 +40,5 @@ SectionSubheading.propTypes = {
 
 SectionHeadingWithDeco.propTypes = {
   comp: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.element,
 };
