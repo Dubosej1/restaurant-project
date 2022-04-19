@@ -22,7 +22,7 @@ export default function FullMenu() {
 function FullMenuColumn1() {
   return (
     <div className="full-menu__subsection">
-      {/* <SaladSection /> */}
+      <SaladSection />
       <MenuSection category="burgers" range={[1, 12]} />
     </div>
   );
@@ -96,3 +96,16 @@ function MenuItem(props) {
 MenuItem.propTypes = {
   item: PropTypes.object,
 };
+
+function SaladSection() {
+  return (
+    <div className="salad-section">
+      <MenuSection category="salad" range={[15, 15]} />
+      <div className="salad-section__optional">
+        <span>Choice Optional</span>
+        <br />
+        <span>Veggie $6.70 / Salmon $6.99</span>
+      </div>
+    </div>
+  );
+}
