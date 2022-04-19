@@ -685,6 +685,24 @@ body {
   }
 }
 
+.salad-section {
+  border: 1px dashed #9b8b00;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+
+  &__optional {
+    color: $color-text-default;
+    font-family: voltaire;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    border-bottom-color: $color-text-default;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+}
+
 // .social-media-icon__facebook {
 //   background: url('../assets/facebook-icon-white.png');
 //   background-size: contain;
