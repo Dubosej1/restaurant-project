@@ -12,6 +12,7 @@ export default function FullMenu() {
       <SectionSubheading comp="full-menu" text={subheading} />
       <div className="full-menu__menu">
         <FullMenuColumn1 />
+        <FullMenuColumn2 />
       </div>
 
       <Footer />
@@ -24,6 +25,14 @@ function FullMenuColumn1() {
     <div className="full-menu__subsection">
       <SaladSection />
       <MenuSection category="burgers" range={[1, 12]} />
+    </div>
+  );
+}
+
+function FullMenuColumn2() {
+  return (
+    <div className="full-menu__subsection">
+      <MenuSection category="fries" range={[28, 31]} />
     </div>
   );
 }
