@@ -614,6 +614,9 @@ body {
   &__menu {
     padding: 0 13rem;
     margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   &__category {
     color: $color-text-default;
@@ -621,6 +624,7 @@ body {
 
   &__subsection {
     width: 50%;
+    margin: 0 1.5rem;
   }
 }
 
