@@ -89,6 +89,13 @@ export const menu = [
     category: `burgers`,
   },
   {
+    name: `burger w/ Salad`,
+    num: 15,
+    price: [`$6.30`],
+    desc: `Without bread, lettuce, tomato, carrot, red onion, parmesean, potato sticks and homemade sauce`,
+    category: `salad`,
+  },
+  {
     name: `kids`,
     num: 17,
     price: [`$6.50`],
@@ -121,6 +128,12 @@ export const categories = [
     name: `kids`,
     icon: null,
     subHead: null,
+    sizes: null,
+  },
+  {
+    name: `salad`,
+    icon: null,
+    subHead: `(1/3 lb burger)`,
     sizes: null,
   },
 ];
