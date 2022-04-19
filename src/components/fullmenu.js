@@ -25,6 +25,9 @@ function FullMenuColumn1() {
     <div className="full-menu__subsection">
       <SaladSection />
       <MenuSection category="burgers" range={[1, 12]} />
+      <MenuSection category="dogs" range={[13, 14]} />
+      <MenuSection category="kids" range={[17, 18]} />
+      <MenuSection category="drinks" range={[51, 56]} />
     </div>
   );
 }
@@ -33,6 +36,10 @@ function FullMenuColumn2() {
   return (
     <div className="full-menu__subsection">
       <MenuSection category="fries" range={[28, 31]} />
+      <MenuSection category="extras" range={[37, 40]} />
+      <MenuSection category="shakes" range={[41, 43]} />
+      <MenuSection category="sweets" range={[44, 50]} />
+      <MenuSection category="beer" range={[70, 71]} />
     </div>
   );
 }
