@@ -109,6 +109,41 @@ export const menu = [
     desc: `homemade with paprika`,
     category: `fries`,
   },
+  {
+    name: `parmesean truffle fries`,
+    num: 29,
+    price: [`$4.40`, `$5.70`],
+    desc: `truffle with parmesean`,
+    category: `fries`,
+  },
+  {
+    name: `wavy fries`,
+    num: 30,
+    price: [`$2.70`, `$3.60`],
+    desc: `with paprika seasoning and spices`,
+    category: `fries`,
+  },
+  {
+    name: `rustic fries`,
+    num: 31,
+    price: [`$3.10`, `$4.10`],
+    desc: `rosemary and garlic or with cheddar`,
+    category: `fries`,
+  },
+  {
+    name: `onion rings`,
+    num: 32,
+    price: [`$4.20`],
+    desc: ``,
+    category: `fries`,
+  },
+  {
+    name: `breaded chicken`,
+    num: 28,
+    price: [`$5.10`],
+    desc: `with barbejack sauce`,
+    category: `fries`,
+  },
 ];
 
 export const categories = [
