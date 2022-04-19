@@ -157,8 +157,8 @@ function ComboSection(props) {
 ComboSection.propTypes = {
   combos: PropTypes.array,
   range: PropTypes.array,
-  addWeight: PropTypes.boolean,
-  addExtraInfo: PropTypes.boolean,
+  addWeight: PropTypes.bool,
+  addExtraInfo: PropTypes.bool,
 };
 
 function ComboItem(props) {
