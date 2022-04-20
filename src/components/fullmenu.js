@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Footer from './footer.js';
-import { SectionHeading, SectionSubheading } from './headings.js';
+import {
+  SectionHeading,
+  SectionSubheading,
+  MenuItemDivider,
+} from './headings.js';
 import { getCategory, getMenuItemsByRange } from './menu.js';
 
 export default function FullMenu() {
@@ -24,10 +28,10 @@ function FullMenuColumn1() {
   return (
     <div className="full-menu__subsection">
       <SaladSection />
-      <MenuSection category="burgers" range={[1, 12]} />
-      <MenuSection category="dogs" range={[13, 14]} />
-      <MenuSection category="kids" range={[17, 18]} />
-      <MenuSection category="drinks" range={[51, 56]} />
+      <MenuSection category="burgers" range={[1, 12]} addDivider={true} />
+      <MenuSection category="dogs" range={[13, 14]} addDivider={true} />
+      <MenuSection category="kids" range={[17, 18]} addDivider={true} />
+      <MenuSection category="drinks" range={[51, 56]} addDivider={false} />
     </div>
   );
 }
@@ -35,11 +39,11 @@ function FullMenuColumn1() {
 function FullMenuColumn2() {
   return (
     <div className="full-menu__subsection">
-      <MenuSection category="fries" range={[28, 31]} />
-      <MenuSection category="extras" range={[37, 40]} />
-      <MenuSection category="shakes" range={[41, 43]} />
-      <MenuSection category="sweets" range={[44, 50]} />
-      <MenuSection category="beer" range={[70, 71]} />
+      <MenuSection category="fries" range={[28, 31]} addDivider={true} />
+      <MenuSection category="extras" range={[37, 40]} addDivider={true} />
+      <MenuSection category="shakes" range={[41, 43]} addDivider={true} />
+      <MenuSection category="sweets" range={[44, 50]} addDivider={true} />
+      <MenuSection category="beer" range={[70, 71]} addDivider={false} />
     </div>
   );
 }
@@ -50,10 +54,13 @@ function MenuSection(props) {
   const menuElems = menuItems.map((item, index) => (
     <MenuItem key={index} item={item} />
   ));
+
+  const divider = props.addDivider ? <MenuItemDivider /> : null;
   return (
-    <div>
+    <div className="full-menu__menu-section-spacing">
       <MenuCategory item={category} />
       {menuElems}
+      {divider}
     </div>
   );
 }
@@ -61,6 +68,7 @@ function MenuSection(props) {
 MenuSection.propTypes = {
   category: PropTypes.string,
   range: PropTypes.array,
+  addDivider: PropTypes.bool,
 };
 
 function MenuCategory(props) {
@@ -80,6 +88,9 @@ function MenuCategory(props) {
       </div>
       <div className="category__sub-head-container">
         <h3 className="category__sub-head--full-menu">{props.item.subHead}</h3>
+      </div>
+      <div className="category__sizes-container">
+        <h4 className="category__sizes--full-menu">{props.item.sizes}</h4>
       </div>
     </div>
   );
@@ -116,7 +127,7 @@ MenuItem.propTypes = {
 function SaladSection() {
   return (
     <div className="salad-section">
-      <MenuSection category="salad" range={[15, 15]} />
+      <MenuSection category="salad" range={[15, 15]} addDivider={false} />
       <div className="salad-section__optional">
         <span>Choice Optional</span>
         <br />
