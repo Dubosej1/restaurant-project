@@ -332,7 +332,7 @@ export const categories = [
     name: `burgers`,
     icon: null,
     subHead: `Choose white or black brioche bread.  Burgers 100% natural, without preservatives, hormones or antibiotics.`,
-    sizes: null,
+    sizes: `(1/4 lb) / (1/3 lb)`,
   },
   {
     name: `drinks`,
@@ -374,7 +374,7 @@ export const categories = [
     name: `shakes`,
     icon: null,
     subHead: null,
-    sizes: null,
+    sizes: `Mini / Normal`,
   },
   {
     name: `sweets`,
