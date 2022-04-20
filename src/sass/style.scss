@@ -738,6 +738,51 @@ body {
   }
 }
 
+.contact {
+  &-main {
+    background-color: $color-background-color-alt;
+    background-image: url(../assets/background-transparent.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    background-attachment: fixed;
+    color: $color-text-default;
+    padding: 5rem 0 3rem;
+
+    &__section-heading {
+      font-family: voltaire;
+      font-weight: 500;
+      letter-spacing: 2px;
+      line-height: 7rem;
+      font-size: 6.2rem;
+      padding: 0 6rem;
+
+      &-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5rem;
+      }
+    }
+
+    &__info-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__greeting {
+      font-family: ubuntu;
+      font-size: 2.4rem;
+      font-weight: 300;
+      line-height: 2.8rem;
+
+      &-container {
+        width: 50%;
+      }
+    }
+  }
+}
+
 // .social-media-icon__facebook {
 //   background: url('../assets/facebook-icon-white.png');
 //   background-size: contain;
