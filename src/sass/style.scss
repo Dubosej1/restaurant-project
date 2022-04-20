@@ -346,6 +346,14 @@ body {
   margin: 8rem 0 0;
 }
 
+.menu-item-divider {
+  display: block;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $color-text-default;
+  margin: 3rem 0 3rem;
+}
+
 .combo-item {
   color: white;
   display: flex;
@@ -626,6 +634,10 @@ body {
     width: 50%;
     margin: 0 1.5rem;
   }
+
+  &__menu-section-spacing {
+    margin-bottom: 3rem;
+  }
 }
 
 .category {
@@ -685,6 +697,25 @@ body {
 
     &-container {
       margin: 0.3rem 0 2rem;
+    }
+  }
+
+  &__sizes {
+    font-family: open-sans;
+    font-size: 1.68rem;
+    font-weight: 100;
+    line-height: 2.4rem;
+
+    &--full-menu {
+      font-family: open-sans;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2.4rem;
+      text-align: right;
+    }
+
+    &-container {
+      margin: 0.3rem 0 1.5rem;
     }
   }
 }
