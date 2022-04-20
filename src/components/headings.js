@@ -9,6 +9,10 @@ export function SectionDivider() {
   return <span className="section-divider"> </span>;
 }
 
+export function MenuItemDivider() {
+  return <span className="menu-item-divider"> </span>;
+}
+
 export function SectionHeadingWithDeco(props) {
   return (
     <div className={`${props.comp}__section-heading-container`}>
