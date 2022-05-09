@@ -17,6 +17,7 @@ export const PageContext = createContext({
 function App(props) {
   const [isMobile, setIsMobile] = useState(false);
   const [currentPage, setCurrentPage] = useState(`home`);
+  const [paddingTop, setPaddingTop] = useState(50);
 
   const page = useMemo(() => ({ currentPage, setCurrentPage }), [currentPage]);
 
@@ -34,10 +35,13 @@ function App(props) {
 
   return (
     <PageContext.Provider value={page}>
-      <div>
-        <Header currentPage={currentPage} isMobile={isMobile} />
-        {pageElement}
-      </div>
+      <div style={{ paddingTop: `${paddingTop}px` }}></div>
+      <Header
+        currentPage={currentPage}
+        isMobile={isMobile}
+        headerPadding={setPaddingTop}
+      />
+      {pageElement}
     </PageContext.Provider>
   );
 }

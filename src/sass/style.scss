@@ -75,6 +75,12 @@ body {
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .nav {
   display: inline-block;
   margin-left: 25rem;
